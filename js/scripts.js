@@ -36,4 +36,9 @@ window.addEventListener('DOMContentLoaded', event => {
       slidesPerView: 1 // set slidesPerView to 1
     });
 
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
 });
